@@ -1,0 +1,65 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+
+.demo{
+    width: 150px;
+    height: 150px;
+    background: red;
+    float: left;
+    position: absolute;
+    transition: 1s;
+    animation-name: change_bg;
+    animation-duration: 4s;
+    animation-direction:alternate-reverse;
+    /* animation-timing-function:cubic-bezier(.42,.88,.89,.05); */
+    /* animation-delay:-3s */
+    animation-iteration-count:2;
+    animation-fill-mode:both;
+    /* animation-iteration-count:infinite; */
+
+
+}
+
+@keyframes change_color{
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: yellow;
+    }
+}
+
+@keyframes change_bg{
+    0%{
+        top: 0px;
+        left: 0px;
+        background: red;
+    }
+
+    25%{
+        top: 0px;
+        left: 500px;
+        background: yellow;
+        border-radius: 50%;
+    }
+
+    50%{
+        background: green;
+        top: 500px;
+        left: 500px;
+    }
+
+    75%{
+        top: 500px;
+        left: 0px;
+        background: purple;
+    }
+
+    100%{
+        top: 1000px;
+        left: 0px;
+        background: blue;
+    }
+}
